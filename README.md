@@ -58,5 +58,5 @@ Before you can run this project, ensure you have the following installed:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/gpg-gin-api.git
+   git clone https://github.com/gauravaspire/gpg-gin-api.git
    cd gpg-gin-api
