@@ -7,16 +7,9 @@ This repository contains a **Go (Golang) web application** built with the **Gin 
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Project Structure](#project-structure)
-- [Usage](#usage)
-  - [Start the Server](#start-the-server)
-  - [Encrypt Data](#encrypt-data)
-  - [Decrypt Data](#decrypt-data)
-- [API Endpoints](#api-endpoints)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
 
+- [Usage](#usage)
+https://weaspire.atlassian.net/wiki/x/5wCMOg
 ---
 
 ## Features
@@ -60,3 +53,5 @@ Before you can run this project, ensure you have the following installed:
    ```bash
    git clone https://github.com/gauravaspire/gpg-gin-api.git
    cd gpg-gin-api
+
+
