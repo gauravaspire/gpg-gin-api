@@ -35,7 +35,7 @@ Before you can run this project, ensure you have the following installed:
 1. **Golang (Go) 1.19+**: [Download here](https://golang.org/dl/).
 2. **GPG (GNU Privacy Guard)**: Install via your package manager:
    - Ubuntu/Debian: `sudo apt-get install gnupg`
-   - macOS: `brew install gnupg`
+   - macOS: `brew install gpg`
    - Windows: [Download GPG](https://gnupg.org/download/index.html)
 3. **Public and Private GPG Keys**:
    - Generate keys:
