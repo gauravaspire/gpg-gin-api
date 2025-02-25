@@ -2,7 +2,7 @@ package controllers
 
 import (
     "io/ioutil"
-    "gpg-gin-api/utils"
+    "gpg-gin-api/library"
     "net/http"
 
     "github.com/gin-gonic/gin"
@@ -25,13 +25,13 @@ func NewGPGController(pubKeyPath, privKeyPath string) *GPGController {
 // EncryptData encrypts the incoming data using GPG.
 func (ctrl *GPGController) EncryptData(c *gin.Context) {
     data, err := ioutil.ReadAll(c.Request.Body)
-    if err != nil {
+    if (err != nil) {
         c.JSON(http.StatusBadRequest, gin.H{"error": "Failed to read request body"})
         return
     }
 
-    encryptedData, err := utils.Encrypt(ctrl.publicKeyPath, data)
-    if err != nil {
+    encryptedData, err := library.Encrypt(ctrl.publicKeyPath, data)
+    if (err != nil) {
         c.JSON(http.StatusInternalServerError, gin.H{"error": "Encryption failed"})
         return
     }
@@ -42,13 +42,13 @@ func (ctrl *GPGController) EncryptData(c *gin.Context) {
 // DecryptData decrypts the incoming encrypted data using GPG.
 func (ctrl *GPGController) DecryptData(c *gin.Context) {
     data, err := ioutil.ReadAll(c.Request.Body)
-    if err != nil {
+    if (err != nil) {
         c.JSON(http.StatusBadRequest, gin.H{"error": "Failed to read request body"})
         return
     }
 
-    decryptedData, err := utils.Decrypt(ctrl.privateKeyPath, data)
-    if err != nil {
+    decryptedData, err := library.Decrypt(ctrl.privateKeyPath, data)
+    if (err != nil) {
         c.JSON(http.StatusInternalServerError, gin.H{"error": "Decryption failed"})
         return
     }
